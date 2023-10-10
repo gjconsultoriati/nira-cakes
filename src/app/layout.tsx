@@ -1,17 +1,19 @@
-import StyledComponentsRegistry  from '@/lib/registry'
-import { Quicksand, Montserrat } from 'next/font/google'
+/* eslint-disable @next/next/no-page-custom-font */
+import Head from 'next/head'
 import { Metadata } from 'next'
+import { Quicksand, Montserrat } from 'next/font/google'
+import StyledComponentsRegistry  from '@/lib/registry'
 
 const quicksand = Quicksand({
   subsets: ['latin'], 
   weight: '700', 
-  variable: '--font-quick'
+  variable: '--font-title'
 })
 const montserrat = Montserrat({
   subsets: ['latin'], 
   weight: ['400', '700'],
   style: ['normal'],
-  variable: '--font-mont'
+  variable: '--font-subtitle'
 });
 
  export const metadata: Metadata = {
@@ -25,7 +27,11 @@ export default function RootLayout({
 }) {
   
   return (
-    <html lang="en" className={`${quicksand.className}, ${montserrat.className}`}>
+    <html lang="en" >
+        <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@400;700&display=swap" rel="stylesheet"/>
+        </Head>
       <body>
         <StyledComponentsRegistry>
           {children}
