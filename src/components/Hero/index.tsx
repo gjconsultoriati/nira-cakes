@@ -37,11 +37,9 @@ export function Hero() {
           initial={{ opacity: 0.6 }}
           whileHover={{
             transition: { duration: 2 },
-            scale: 1.2
           }}
           whileTap={{ scale: 0.9 }}
           whileInView={{ opacity: 1 }}
-         
         >
           Conheça agora
           

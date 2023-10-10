@@ -1,12 +1,13 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default  {
   COLORS: {
-    MAIN: '#FCDFDF',
-    SECONDARY: '#D9ADAD',
-
+    MAIN: '#FF6666',
+    SECONDARY: '#FF8989',
+    BACKGROUND: '#FCAEAE',
+    TEXT: '#FFEADD',
     GRAY_400: '#838383',
 
-    BLACK_200: '#101010',
+    BLACK_200: '#222222',
     WHITE: '#FFFFFF'
   },
   FONT_SIZE: {
