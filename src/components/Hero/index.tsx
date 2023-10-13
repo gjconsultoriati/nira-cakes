@@ -1,8 +1,8 @@
+import ArrowDown from '@/assets/arrowdown.svg';
+import ImageHero from '@/assets/heroImage.svg';
+import { motion } from 'framer-motion';
 import Image from "next/image";
 import { ButtonCallToAction, Container, HeroContainer, Subtitlte, Title } from "./styles";
-import ImageHero from '@/assets/heroImage.svg';
-import ArrowDown from '@/assets/arrowdown.svg';
-import { motion } from 'framer-motion'
 
 
 export function Hero() {
