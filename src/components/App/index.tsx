@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { Carousel } from "@/components/Carousel";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import Skeleton from 'react-loading-skeleton'
-import { motion } from 'framer-motion'
-import { Container, WrapperVideo } from "./styles";
+import { motion } from 'framer-motion';
+import { useEffect, useState } from "react";
+import Skeleton from 'react-loading-skeleton';
 
+import { Container, WrapperVideo } from "./styles";
 export default function App() {
   const [isLoading, setIsLoading] = useState(true)
 
@@ -13,12 +14,12 @@ export default function App() {
   }, [isLoading])
 
   return (
-    <Container>
+    <>
       {
         isLoading ? (
-          <Skeleton count={5} height={100} />
+          <Skeleton count={10} height={100} />
         ) : (
-          <>
+          <Container>
             <header>
               <Header />
             </header>
@@ -30,10 +31,10 @@ export default function App() {
               <motion.strong
                 className="title"
                 key={"my_unique_key"}
-                exit={{ opacity: 0,  }}
+                exit={{ opacity: 0, }}
                 initial={{ opacity: 0, }}
-                animate={{ 
-                  opacity: 1 
+                animate={{
+                  opacity: 1
                 }}
                 transition={{
                   duration: 4
@@ -42,10 +43,15 @@ export default function App() {
                 Transformando ocasiões em deliciosas memórias
               </motion.strong>
             </WrapperVideo>
-          </>
+            <section className="section-higlights" >
+                <h1 className="higlights">Em Destaques</h1>
+              <Carousel />
+            </section>
+            
+          </Container>
         )
       }
 
-    </Container>
+    </>
   )
 }

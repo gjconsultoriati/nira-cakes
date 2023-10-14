@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import Head from 'next/head'
-import { Metadata } from 'next'
-import { Quicksand, Montserrat } from 'next/font/google'
-import StyledComponentsRegistry  from '@/lib/registry'
+import StyledComponentsRegistry from '@/lib/registry';
+import { Metadata } from 'next';
+import { Montserrat, Quicksand } from 'next/font/google';
+import Head from 'next/head';
+
 
 const quicksand = Quicksand({
   subsets: ['latin'], 

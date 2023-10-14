@@ -1,6 +1,6 @@
+import MenuIcon from '@/assets/menu.svg';
 import Image from "next/image";
 import { Container } from "./styles";
-import MenuIcon from '@/assets/menu.svg'
 
 export function Header() {
   return (

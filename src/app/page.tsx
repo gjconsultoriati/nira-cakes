@@ -1,9 +1,14 @@
 'use client'
 import App from '@/components/App'
-import { ThemeProvider } from 'styled-components'
-import theme  from '@/theme'
+import theme from '@/theme'
 import GlobalStyles from '@/theme/global'
 import 'react-loading-skeleton/dist/skeleton.css'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
+import { ThemeProvider } from 'styled-components'
+
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
