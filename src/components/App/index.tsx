@@ -1,5 +1,6 @@
 import ImageHero from '@/assets/heroImage.svg';
 import { Carousel } from "@/components/Carousel";
+import { Footer } from '@/components/Footer';
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { motion } from 'framer-motion';
@@ -84,7 +85,9 @@ export default function App() {
           </Swiper>
         </ScrollCards>
       </section>
-
+      <footer>
+        <Footer />
+      </footer>
 
     </Container>
   )

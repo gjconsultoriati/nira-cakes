@@ -15,12 +15,12 @@ export const Container = styled.div`
       }
     .section-other-products {
       margin-top: 5rem;
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
+      background-color: ${({ theme }) => theme.COLORS.SECONDARY};
         h1 {
           padding: 1rem;
           color: #FFFFFF;
         }
-      background-color: ${({ theme }) => theme.COLORS.SECONDARY};
     }
     .swiper-button-next {
        color: ${({ theme }) => theme.COLORS.SECONDARY}
