@@ -5,7 +5,7 @@ export default  {
     SECONDARY: '#C95268',
     TEXT: '#FDEADC',
     GRAY_600: '#838383',
-    BLACK: '#22222',
+    BLACK: '#222222',
     WHITE: '#FFFFFF'
   },
   FONT_SIZE: {

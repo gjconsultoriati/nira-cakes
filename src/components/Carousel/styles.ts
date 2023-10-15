@@ -15,14 +15,14 @@ export const Container = styled.div`
   justify-content: center;
  }
  .swiper-button-next {
-  color: ${({theme}) => theme.COLORS.SECONDARY}
+  color: ${({ theme }) => theme.COLORS.SECONDARY}
  }
  .swiper-button-prev {
-  color: ${({theme}) => theme.COLORS.SECONDARY}
+  color: ${({ theme }) => theme.COLORS.SECONDARY}
  }
  .swiper-pagination-bullet-active{
-    background: ${({theme}) => theme.COLORS.SECONDARY}
-    }
+    background: ${({ theme }) => theme.COLORS.SECONDARY}
+  }
 `;
 
 

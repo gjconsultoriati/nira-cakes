@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { CardProduct } from "../CardProduct";
 import { Container, ScrollCards } from "./styles";
 
+
 export function Carousel() {
   const cakeOne = [
     {
@@ -43,7 +44,6 @@ export function Carousel() {
             ))
           }
         </Swiper>
-
       </ScrollCards >
     </Container>
 

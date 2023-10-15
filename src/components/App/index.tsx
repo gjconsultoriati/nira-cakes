@@ -1,10 +1,32 @@
+import ImageHero from '@/assets/heroImage.svg';
+import { Carousel } from "@/components/Carousel";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { motion } from 'framer-motion';
-import { Carousel } from "../Carousel";
-import { Container, WrapperVideo } from "./styles";
+import Image from "next/image";
+import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Container, ContentCard, ScrollCards, WrapperCard, WrapperVideo } from "./styles";
 
 export default function App() {
+  const cakeOne = [
+    {
+      id: String(Math.random() * 1000),
+      name: 'Bolo de Chocolate com chantininho com nutella e brigadeiro',
+    },
+    {
+      id: String(Math.random() * 1000),
+      name: 'Bolo de Morango com coco',
+    },
+    {
+      id: String(Math.random() * 1000),
+      name: 'Bolo de Maracuja com nutella',
+    },
+    {
+      id: String(Math.random() * 1000),
+      name: 'Bolo de prestigio e brigadeiro',
+    },
+  ]
   return (
     <Container>
       <header>
@@ -34,6 +56,35 @@ export default function App() {
         <h1 className="higlights">Em Destaques</h1>
         <Carousel />
       </section>
+      <section className="section-other-products">
+        <h1 className="higlights">Explore outros</h1>
+        <ScrollCards>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            slidesPerView={2}
+            navigation
+            pagination={{ clickable: true, }}
+          >
+            {
+              cakeOne.map((cake) => (
+                <SwiperSlide key={cake.id} className='swiperSlide'>
+                  <WrapperCard>
+                    <Image
+                      src={ImageHero}
+                      alt='Bolo no prato para exposição'
+                    />
+                    <ContentCard>
+                      <span >{cake.name}</span>
+                      <button>Saiba mais</button>
+                    </ContentCard>
+                  </WrapperCard>
+                </SwiperSlide>
+              ))
+            }
+          </Swiper>
+        </ScrollCards>
+      </section>
+
 
     </Container>
   )
