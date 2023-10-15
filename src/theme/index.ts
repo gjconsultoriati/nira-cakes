@@ -4,7 +4,7 @@ export default  {
     MAIN: '#D67888',
     SECONDARY: '#C95268',
     TEXT: '#FDEADC',
-    GRAY_400: '#838383',
+    GRAY_600: '#838383',
     BLACK: '#22222',
     WHITE: '#FFFFFF'
   },
@@ -16,7 +16,6 @@ export default  {
     '2XL': 24,
     '3XL': 30,
     '4XL': 36,
-
     '5XL': 38
     
   },

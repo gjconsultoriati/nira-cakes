@@ -50,16 +50,16 @@ export const ContentCard = styled.div`
       height: 3.75rem;
       width: 150px;
       border-radius: 12px;
-      background-color:  ${({ theme }) => theme.COLORS.SECONDARY};
+      background-color:  ${({ theme }) => theme.COLORS.MAIN};
       
       font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
       font-family: ${({ theme }) => theme.FONT_FAMILY.Montserrat};
-      color: ${({ theme }) => theme.COLORS.WHITE};
+      color: ${({ theme }) => theme.COLORS.TEXT};
       font-weight: bold;
       transition: all 0.2s;
 
       &:hover {
-        background-color:  ${({ theme }) => theme.COLORS.MAIN};
+        background-color:  ${({ theme }) => theme.COLORS.SECONDARY};
         border: 3px solid ${({ theme }) => theme.COLORS.SECONDARY};
         color: ${({ theme }) => theme.COLORS.TEXT};
       }
@@ -69,7 +69,8 @@ export const ContentCard = styled.div`
       word-break: break-word;
       font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
       font-family: ${({ theme }) => theme.FONT_FAMILY.Montserrat};
-      color: ${({ theme }) => theme.COLORS.TEXT};
+      color: ${({ theme }) => theme.COLORS.BLACK};
+      font-weight: 600;
    }
   
 `;
