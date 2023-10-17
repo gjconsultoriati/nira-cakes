@@ -66,19 +66,16 @@ export const ButtonCallToAction = styled.div`
     height: 3.75rem;
     width: 215px;
     border-radius: 12px;
-    background-color:  ${({ theme }) => theme.COLORS.SECONDARY};
+    background-color:  ${({ theme }) => theme.COLORS.TEXT};
     
     font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
     font-family: ${({ theme }) => theme.FONT_FAMILY.Montserrat};
-    color: ${({ theme }) => theme.COLORS.WHITE};
-    font-weight: bold;
+    color: ${({ theme }) => theme.COLORS.SECONDARY};
+    font-weight: 600;
     transition: all 0.2s;
 
     &:hover {
-      background-color:  ${({ theme }) => theme.COLORS.MAIN};
-      border: 3px solid ${({ theme }) => theme.COLORS.SECONDARY};
-    color: ${({ theme }) => theme.COLORS.TEXT};
-
+      background-color: #FEF2EA;
     }
   }
 `;

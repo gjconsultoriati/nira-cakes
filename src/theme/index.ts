@@ -9,6 +9,7 @@ export default  {
     WHITE: '#FFFFFF'
   },
   FONT_SIZE: {
+    XS: 12,
     SM: 14,
     MD: 16,
     LG: 18,

@@ -15,7 +15,6 @@ export const Container = styled.div`
       }
     .section-other-products {
       margin-top: 5rem;
-      margin-bottom: 2rem;
       background-color: ${({ theme }) => theme.COLORS.SECONDARY};
         h1 {
           padding: 1rem;
@@ -29,8 +28,9 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.SECONDARY}
     }
     .swiper-pagination-bullet-active{
-      background: ${({ theme }) => theme.COLORS.WHITE}
+      background: ${({ theme }) => theme.COLORS.MAIN}
     }
+    
   }
   
 `
@@ -79,8 +79,8 @@ export const ScrollCards = styled.div`
 export const WrapperCard = styled.div`
   align-items: center;
   justify-content: center;
-  border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
-  box-shadow:  0px 4px 12px rgba(0, 0, 0, 0.09);
+  border: 1px solid ${({ theme }) => theme.COLORS.SECONDARY};
+  box-shadow:  0px 4px 12px rgba(0, 0, 0, 0.5);
   padding: 1rem;
   margin-left: 15px;
   margin-top: 1.5rem;
