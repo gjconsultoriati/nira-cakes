@@ -41,12 +41,27 @@ export const WrapperCard = styled.div<PropsStyles>`
     `
   )}
 
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+
+    img {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
   }
 `
 
 
 export const ContentCard = styled.div<PropsStyles>`
   width: 100%;
+ 
 
   button {
       display: flex;
@@ -82,7 +97,7 @@ export const ContentCard = styled.div<PropsStyles>`
    }
   
    @media (max-width: 768px){
-      max-width: 200px;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -93,13 +108,15 @@ export const ContentCard = styled.div<PropsStyles>`
       ${({ theme, small }) => small && (
         
         css`
+
           span {
+            max-width: 150px;
             word-break: break-word;
-            font-size: ${theme.FONT_SIZE.XS}px;
+            font-size: ${theme.FONT_SIZE.SM}px;
             font-family: ${theme.FONT_FAMILY.Montserrat};
             color: ${theme.COLORS.BLACK}
             font-weight: 500;
-           
+            
           }
 
           button {

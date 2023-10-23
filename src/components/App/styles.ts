@@ -21,10 +21,14 @@ export const Container = styled.div`
         }
     }
     .swiper-button-next {
-       color: ${({ theme }) => theme.COLORS.SECONDARY}
+      color: ${({ theme }) => theme.COLORS.MAIN};
+      margin-right: 20px;
+      
+
     }
     .swiper-button-prev {
-      color: ${({ theme }) => theme.COLORS.SECONDARY}
+      color: ${({ theme }) => theme.COLORS.MAIN};
+      margin-left: 20px;
     }
     .swiper-pagination-bullet-active{
       background: ${({ theme }) => theme.COLORS.MAIN}

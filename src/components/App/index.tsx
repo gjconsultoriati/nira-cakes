@@ -59,7 +59,7 @@ export default function App() {
         <ScrollCards>
           <Swiper
             modules={[Navigation, Pagination]}
-            slidesPerView={2}
+            slidesPerView={1}
             navigation
             pagination={{ clickable: true, }}
           >
