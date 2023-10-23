@@ -3,24 +3,26 @@ import { ContentCard, WrapperCard } from "./styles";
 import ImageHero from '@/assets/heroImage.svg';
 import Image from 'next/image';
 
-type Props ={
+type Props = {
   data: {
     id: string,
     name: string
   }
+  small?: boolean;
 }
-export function CardProduct({data }: Props) {
+export function CardProduct({ small, data }: Props) {
   return (
-    <WrapperCard>
-    <Image 
-      src={ImageHero}
-      alt='Bolo no prato para exposição'
-    />
-    <ContentCard>
-      <span >{data.name}</span>
-      <button>Saiba mais</button>
-    </ContentCard>
-  </WrapperCard>
-
+    <WrapperCard
+      small={small}
+    >
+      <Image
+        src={ImageHero}
+        alt='Bolo no prato para exposição'
+      />
+      <ContentCard small={small}>
+        <span >{data.name}</span>
+        <button>Saiba mais</button>
+      </ContentCard>
+    </WrapperCard>
   )
 }

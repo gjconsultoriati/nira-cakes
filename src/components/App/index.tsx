@@ -1,20 +1,16 @@
-import ImageHero from '@/assets/heroImage.svg';
 import { Carousel } from "@/components/Carousel";
 import { Footer } from '@/components/Footer';
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { motion } from 'framer-motion';
-import Image from "next/image";
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Container, ContentCard, ScrollCards, WrapperCard, WrapperVideo } from "./styles";
+import { CardProduct } from "../CardProduct";
+import { Container, ScrollCards, WrapperVideo } from "./styles";
 
 export default function App() {
   const cakeOne = [
-    {
-      id: String(Math.random() * 1000),
-      name: 'Bolo de Chocolate com chantininho com nutella e brigadeiro',
-    },
+    
     {
       id: String(Math.random() * 1000),
       name: 'Bolo de Morango com coco',
@@ -27,6 +23,7 @@ export default function App() {
       id: String(Math.random() * 1000),
       name: 'Bolo de prestigio e brigadeiro',
     },
+    
   ]
   return (
     <Container>
@@ -69,16 +66,10 @@ export default function App() {
             {
               cakeOne.map((cake) => (
                 <SwiperSlide key={cake.id} className='swiperSlide'>
-                  <WrapperCard>
-                    <Image
-                      src={ImageHero}
-                      alt='Bolo no prato para exposição'
-                    />
-                    <ContentCard>
-                      <span >{cake.name}</span>
-                      <button>Saiba mais</button>
-                    </ContentCard>
-                  </WrapperCard>
+                  <CardProduct 
+                    data={cake}
+                    small
+                  />
                 </SwiperSlide>
               ))
             }

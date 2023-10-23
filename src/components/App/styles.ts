@@ -14,7 +14,6 @@ export const Container = styled.div`
       margin-top: 4rem;
       }
     .section-other-products {
-      margin-top: 5rem;
       background-color: ${({ theme }) => theme.COLORS.SECONDARY};
         h1 {
           padding: 1rem;
@@ -88,7 +87,7 @@ export const WrapperCard = styled.div`
   margin-bottom: 4rem;
   transition: all 0.2s;
   background-color: ${({ theme }) => theme.COLORS.WHITE};
-
+  
   &:hover {
     border: 1px solid ${({ theme }) => theme.COLORS.TEXT};
     cursor: pointer;

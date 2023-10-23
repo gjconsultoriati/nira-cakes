@@ -1,6 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const WrapperCard = styled.div`
+type PropsStyles = {
+  small?: boolean;
+}
+export const WrapperCard = styled.div<PropsStyles>`
   align-items: center;
   justify-content: center;
   border: 2px solid ${({ theme }) => theme.COLORS.MAIN};
@@ -11,7 +14,7 @@ export const WrapperCard = styled.div`
   border-radius: 8px;
   margin-bottom: 4rem;
   transition: all;
-
+ 
   &:hover {
     border: 2px solid ${({ theme }) => theme.COLORS.SECONDARY};
     cursor: pointer;
@@ -23,27 +26,32 @@ export const WrapperCard = styled.div`
       margin-bottom: 50px;
       object-fit: contain;
     }
+    ${({ small, theme }) => (
+    small &&
+    css`
+      width: 267px;
+      height: 356px;
+      background: ${theme.COLORS.WHITE};
+      margin-bottom: 10rem;
+      
+      img {
+        width: 100%;
+        height: 150px;
+      }
+    `
+  )}
+
   }
 `
 
 
-export const ContentCard = styled.div`
+export const ContentCard = styled.div<PropsStyles>`
   width: 100%;
-  @media (max-width: 768px){
-    max-width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
 
   button {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
 
       margin-top: 1.5rem;
       border: none;
@@ -73,4 +81,32 @@ export const ContentCard = styled.div`
       font-weight: 600;
    }
   
+   @media (max-width: 768px){
+      max-width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+
+      ${({ theme, small }) => small && (
+        
+        css`
+          span {
+            word-break: break-word;
+            font-size: ${theme.FONT_SIZE.XS}px;
+            font-family: ${theme.FONT_FAMILY.Montserrat};
+            color: ${theme.COLORS.BLACK}
+            font-weight: 500;
+           
+          }
+
+          button {
+            height: 2.5rem;
+            display: flex;
+          }
+        `
+    )}
+  }
 `;
