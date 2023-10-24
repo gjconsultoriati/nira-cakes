@@ -98,10 +98,20 @@ export const WrapperInfo = styled.div`
 `;
 
 export const Copy = styled.div`
+ 
    a {
     color: ${({ theme }) => theme.COLORS.MAIN};
     font-size: ${({ theme }) => theme.FONT_SIZE.XS}px;
     font-family: ${({ theme }) => theme.FONT_FAMILY.Montserrat};
     text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    a {
+      color: ${({ theme }) => theme.COLORS.MAIN};
+      font-size: 10px;
+      font-family: ${({ theme }) => theme.FONT_FAMILY.Montserrat};
+      text-decoration: none;
+    }
   }
 `

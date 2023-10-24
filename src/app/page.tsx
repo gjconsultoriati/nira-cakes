@@ -17,7 +17,6 @@ export default function Home() {
 
   useEffect(() => {
     setIsLoading(false)
-    console.log('entrou no useEffect')
   }, [isLoading])
 
 
@@ -25,9 +24,9 @@ export default function Home() {
     return <Skeleton count={10} height={100} />
   }
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <App />
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <App />
+      </ThemeProvider>
   )
 }

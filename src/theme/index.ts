@@ -1,4 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
+
 export default  {
   COLORS: {
     MAIN: '#D67888',
@@ -26,4 +27,3 @@ export default  {
   }
 
 }
-
